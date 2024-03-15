@@ -17,5 +17,5 @@ phases:
   post_build:
     commands:
       - echo "Updating Lambda function..."
-      - aws lambda update-function-code --function-name doordash-lambda-function deployment_package.zip
+      - aws lambda update-function-code --function-name doordash-lambda-function --zip-file fileb://deployment_package.zip
       - echo "Deployment complete!"
